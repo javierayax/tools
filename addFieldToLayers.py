@@ -1,8 +1,8 @@
-import os, arcpy
+import arcpy
 mxd = arcpy.mapping.MapDocument("current")
 layers = arcpy.mapping.ListLayers(mxd)
 
 for layer in layers:
-    layer.name = layer.name.replace("COLOMBIA_COP_VECTOR_DBO_", "")
+    arcpy.AddField_management(layer, 'DATA_SOURCE', "TEXT", field_length = 500)
 
 arcpy.RefreshTOC()

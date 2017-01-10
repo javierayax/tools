@@ -1,7 +1,7 @@
 import os, arcpy
 mxd = arcpy.mapping.MapDocument("current")
 layers = arcpy.mapping.ListLayers(mxd)
-workspace = r"D:\SIIMA\EstructuracionDatos\BASES.gdb"
+workspace = r"D:\SIIMA\EstructuracionDatos\A2.gdb"
 
 for layer in layers:
     try:
